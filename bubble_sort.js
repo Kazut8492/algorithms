@@ -1,12 +1,13 @@
-let list = [1,6,2,8,3,5,9,11,15,18,22,25];
+let list = [1,18,6,2,8,25,3,5,22,9,11,15];
 
 const bubble_sort = (list) => {
-  for (let x = 0; x < list.length-1; x++) {
-    for (let y = x; y < list.length-1; y++) {
+  for (let x = 0; x <= list.length-2; x++) {
+    for (let y = x+1; y <= list.length-1; y++) {
         if (list[x] > list[y]){
-            const temp = list[y]
-            list[y] = list[x]
-            list[x] = temp
+            // const temp = list[y]
+            // list[y] = list[x]
+            // list[x] = temp
+            [list[x], list[y]] = [list[y], list[x]]
         }
     }
   }
